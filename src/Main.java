@@ -17,9 +17,18 @@ public  class Main {
             System.out.println(" Задача№2 ");
             int[] expence = {36_000, 45_500, 39_985, 21_456, 21_477};
             Arrays.sort(expence);
-            int max = expence[expence.length - 1];
+            int max = expence[0];
             int min = expence[0];
-            System.out.println(" Минимальная сумма трат за неделю составила " + min + " рублей " + " Максимальная сумма трат за неделю составила " + max + " рублей ");
+            for (int i = 1; i < expence.length; i++){
+                if (expence[i] < min) {
+                    min = expence[i];
+                }
+                if (expence[i] > max){
+                    max=expence[i];
+                }
+            }
+            System.out.println(" Минимальная сумма трат за неделю составила " + min + " рублей ");
+            System.out.println(" Максимальная сумма трат за неделю составила " + max + " рублей ");
 
             System.out.println(" Задача№3 ");
             int[] monthExpence = {34567, 123458, 65390, 568806, 235541};
