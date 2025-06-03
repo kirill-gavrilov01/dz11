@@ -8,17 +8,16 @@ public  class Main {
         int[] spending = generateRandomArray();
         int sum = 0;
         for (int expense : spending) {
-            sum += expense;
-        }
-        System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
+            sum += expense;}
         {
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей.");
+
 
 
             System.out.println(" Задача№2 ");
             int[] expence = {36_000, 45_500, 39_985, 21_456, 21_477};
-            Arrays.sort(expence);
-            int max = expence[0];
-            int min = expence[0];
+            int min = (expence[0]);
+            int max = (expence[0]);
             for (int i = 1; i < expence.length; i++){
                 if (expence[i] < min) {
                     min = expence[i];
@@ -36,7 +35,7 @@ public  class Main {
             for (int week : monthExpence) {
                 total = total + week;
             }
-            float weekAverage = (total / (monthExpence.length));
+            float weekAverage = (float) total / monthExpence.length;
             System.out.println(" Средняя сумма трат за месяц составила " + weekAverage + " рублей ");
 
             System.out.println(" Задача№4 ");
